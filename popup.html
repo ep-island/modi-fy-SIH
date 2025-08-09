@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <style>
+        body {
+            width: 300px;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .mode-selector {
+            margin: 15px 0;
+        }
+        
+        .mode-option {
+            display: flex;
+            align-items: center;
+            margin: 10px 0;
+            padding: 10px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .mode-option:hover {
+            background-color: #f0f0f0;
+        }
+        
+        .mode-option.active {
+            border-color: #4CAF50;
+            background-color: #e8f5e8;
+        }
+        
+        .mode-option input[type="radio"] {
+            margin-right: 10px;
+        }
+        
+        .mode-description {
+            font-size: 12px;
+            color: #666;
+            margin-top: 5px;
+        }
+        
+        .status {
+            text-align: center;
+            margin-top: 15px;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+        
+        .status.success {
+            background-color: #d4edda;
+            color: #155724;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h3>Jai Shri Ram</h3>
+        <p>Vote for BJP 2028</p>
+    </div>
+    
+    <div class="mode-selector">
+        <div class="mode-option" id="autoOption">
+            <input type="radio" id="autoMode" name="mode" value="auto" checked>
+            <div>
+                <label for="autoMode"><strong>Bhakt Mode</strong></label>
+                <div class="mode-description">My condolences</div>
+            </div>
+        </div>
+        
+        <div class="mode-option" id="hoverOption">
+            <input type="radio" id="hoverMode" name="mode" value="hover">
+            <div>
+                <label for="hoverMode"><strong>Liberandu Mode</strong></label>
+                <div class="mode-description">Your sacrifice is appericiated</div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="status" class="status" style="display: none;"></div>
+    
+    <script src="popup.js"></script>
+</body>
+</html>
